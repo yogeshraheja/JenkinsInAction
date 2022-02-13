@@ -522,6 +522,7 @@
     - Select the Maven Installer and put the goal as `package`
     - Under the `Build` section, click on `Add Build`, then `Execute Shell`
     - Put the below command `docker build -t myapp -f docker .`
+    - Note: You can also create a container like docker container run -itd -p 83:8080 myapp
     - Click on Save button
     - That's it your job got created, 
     - You can build the job, and see the ansible making its changes.
