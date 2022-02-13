@@ -1,0 +1,22 @@
+---
+-
+  name: This playbook is a test file for Ansible and Jenkins
+  hosts: "all"
+
+  tasks:
+    -
+      name: Installing Apache
+      apt:
+        name: apache2
+        state: present
+
+    -
+      name: Configuring file
+      copy:
+        content: "<h1>This file has been created by Ansible using Jenkins build</h1>"
+        dest: /var/www/html/index.html
+
+    - name: Starting Services
+      service:
+        name: apache2
+        state: started
